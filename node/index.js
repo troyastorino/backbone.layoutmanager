@@ -7,7 +7,7 @@ var _ = require("underscore");
 // Using Cheerio instead of jQuery, because Cheerio emulates a loosely
 // compatible API that we further augment to ensure unit tests pass.  It is
 // also much faster than jsdom.
-var $ = require("cheerio");
+var $ = require("jquery");
 
 // This is to avoid unwanted errors thrown when using
 // `Backbone.View#setElement`.
