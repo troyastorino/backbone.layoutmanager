@@ -11,13 +11,13 @@ var $ = require("jquery");
 
 // This is to avoid unwanted errors thrown when using
 // `Backbone.View#setElement`.
-$.prototype.unbind = $.prototype.off = function() { return this; };
+// $.prototype.unbind = $.prototype.off = function() { return this; };
 
 // Since jQuery is not being used and LayoutManager depends on a Promise
 // implementation close to jQuery, we use `underscore.deferred` here which
 // matches jQuery's Deferred API exactly.  This is mixed into Cheerio to make
 // it more seamless.
-_.extend($, require("underscore.deferred"));
+// _.extend($, require("underscore.deferred"));
 
 // Get Backbone and _ into the global scope.
 _.defaults(global, { Backbone: Backbone, _: _ });
